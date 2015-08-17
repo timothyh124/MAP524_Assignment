@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!-- The main content view -->
+    <RelativeLayout
+        android:orientation="vertical"
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textSize="50sp"
+            android:id="@+id/time_to_wait"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/time_to_wait"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="30dp"
+            android:textSize="18sp"
+            android:text="Current wait time "
+            android:id="@+id/textView" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/time_to_wait"
+            android:textSize="18sp"
+            android:layout_toRightOf="@id/textView"
+            android:layout_marginBottom="30dp"
+            android:id="@+id/method" />
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_alignEnd="@id/time_to_wait"
+            android:layout_alignRight="@id/time_to_wait"
+            android:layout_below="@id/time_to_wait"
+            android:text="Update and Send me notificiations"
+            android:id="@+id/noti_switch"
+
+            android:checked="false" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Last update: "
+            android:id="@+id/textView3"
+            android:layout_gravity="center_horizontal" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/last_updated"
+            android:text="loading..."
+            android:layout_toRightOf="@id/textView3"
+            android:layout_alignBottom="@id/textView3"/>
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="update"
+            android:id="@+id/update_btn"
+            android:layout_below="@+id/noti_switch"
+            android:layout_alignEnd="@id/time_to_wait"
+            android:layout_alignRight="@id/time_to_wait"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:textSize="45sp"
+            android:gravity="center_vertical"
+            android:id="@+id/office_name"
+            android:textColor="#FFFFFFFF"
+            android:background="#ff59b2ff"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true" />
+
+    </RelativeLayout>
+    <!-- The navigation drawer -->
+    <ListView android:id="@+id/left_drawer"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:choiceMode="singleChoice"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp"
+        android:background="#111"/>
+</android.support.v4.widget.DrawerLayout>
